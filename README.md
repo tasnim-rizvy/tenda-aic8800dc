@@ -7,21 +7,8 @@ Tested on: Linux 6.18.12+kali-amd64
 ## Build & Installation
 
 ```bash
-# Rebuild the deb package
-dpkg-deb --build extracted ax300.deb
-
 # Install the driver
 sudo dpkg -i ax300.deb
-```
-
-If you prefer to build manually:
-
-```bash
-cd /usr/src/tenda/aic8800/drivers/aic8800
-make clean
-make -C /lib/modules/$(uname -r)/build M=$(pwd) modules
-sudo make -C /lib/modules/$(uname -r)/build M=$(pwd) modules_install
-sudo depmod -a
 ```
 
 ## Verify Installation
